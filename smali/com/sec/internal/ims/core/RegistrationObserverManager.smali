@@ -1604,7 +1604,7 @@
     .local v8, "lastVolteSwitch":Ljava/lang/String;
     const-string/jumbo v10, "ro.product.first_api_level"
 
-    invoke-static {v10, v3}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v10, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 

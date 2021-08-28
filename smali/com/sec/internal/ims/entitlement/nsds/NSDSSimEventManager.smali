@@ -1539,7 +1539,7 @@
     .line 387
     const-string/jumbo v10, "ro.simbased.changetype"
 
-    invoke-static {v10, v6}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v10, v6}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1586,7 +1586,7 @@
 
     const-string/jumbo v11, "ro.product.first_api_level"
 
-    invoke-static {v11, v8}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v11, v8}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v8
 

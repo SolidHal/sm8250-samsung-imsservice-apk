@@ -430,7 +430,7 @@
 
     const-string/jumbo v1, "persist.sys.ims_test_mode"
 
-    invoke-static {v1, v0}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 

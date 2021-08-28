@@ -1886,7 +1886,7 @@
     :cond_0
     const-string/jumbo v12, "ro.product.first_api_level"
 
-    invoke-static {v12, v3}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v12, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v12
 

@@ -671,7 +671,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
@@ -679,7 +679,7 @@
     .local v2, "spCameraRun":I
     const-string/jumbo v4, "service.camera.rec.running"
 
-    invoke-static {v4, v3}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v4, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 

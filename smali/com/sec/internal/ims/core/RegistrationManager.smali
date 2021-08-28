@@ -1271,7 +1271,7 @@
     .line 1392
     const-string/jumbo v12, "ro.build.PDA"
 
-    invoke-static {v12}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v12}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
@@ -1635,7 +1635,7 @@
     .line 1418
     const-string/jumbo v3, "ril.sw_ver"
 
-    invoke-static {v3}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1743,7 +1743,7 @@
     .line 1430
     const-string/jumbo v3, "ro.product.base_model"
 
-    invoke-static {v3}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

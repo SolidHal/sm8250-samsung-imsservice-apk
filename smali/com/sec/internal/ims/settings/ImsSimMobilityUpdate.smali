@@ -1012,7 +1012,7 @@
 
     const-string/jumbo v6, "persist.ims.simmobility"
 
-    invoke-static {v6, v4}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v6, v4}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 
@@ -1220,7 +1220,7 @@
 
     const-string v11, ""
 
-    invoke-static {v10, v11}, Landroid/os/SemSystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v10, v11}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -1576,7 +1576,7 @@
     .line 403
     const-string/jumbo v2, "ro.product.first_api_level"
 
-    invoke-static {v2, v3}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v2, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 

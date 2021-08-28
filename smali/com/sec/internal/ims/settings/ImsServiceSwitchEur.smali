@@ -2232,7 +2232,7 @@
     .line 511
     const-string/jumbo v6, "ro.product.first_api_level"
 
-    invoke-static {v6, v5}, Landroid/os/SemSystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v6, v5}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 

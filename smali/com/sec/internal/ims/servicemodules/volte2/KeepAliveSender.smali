@@ -439,7 +439,7 @@
 
     const-string/jumbo v1, "persist.sys.ims.blockvzwka"
 
-    invoke-static {v1, v0}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
