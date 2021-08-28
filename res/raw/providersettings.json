@@ -1,0 +1,54 @@
+{
+  "ProviderSettings": [
+    {
+      "mnoname": "Orange_fr",
+      "entitlement_init_from_app": "false",
+      "entitlement_for_volte": "true",
+      "volte_user_setting_for_service": "false",
+      "volte_setting_value": "false",
+      "volte_auto_on": "true",
+      "entitlement_for_vowifi": "true",
+      "vowifi_user_setting_for_service": "true",
+      "vowifi_setting_value": "false",
+      "vowifi_auto_on": "false",
+      "entitlement_for_smsoip": "true",
+      "ps_data_off": "true",
+      "ps_data_roaming": "true",
+      "notif_senderid": "958953883393",
+      "notif_action": "2",
+      "server_vendor": "hpe"
+    },
+    {
+      "mnoname": "GenericIR92_US:NexTech",
+      "entitlement_init_from_app": "true",
+      "entitlement_for_volte": "false",
+      "volte_user_setting_for_service": "false",
+      "volte_setting_value": "false",
+      "volte_auto_on": "false",
+      "entitlement_for_vowifi": "true",
+      "vowifi_user_setting_for_service": "true",
+      "vowifi_setting_value": "false",
+      "vowifi_auto_on": "false",
+      "entitlement_for_smsoip": "false",
+      "ps_data_off": "true",
+      "ps_data_roaming": "true",
+      "notif_senderid": "501322967813",
+      "notif_action": "2",
+      "server_vendor": "hpe"
+    },
+    {
+      "mnoname": "USCC_US",
+      "entitlement_init_from_app": "true",
+      "entitlement_for_volte": "false",
+      "volte_auto_on": "false",
+      "entitlement_for_vowifi": "true",
+      "vowifi_auto_on": "false",
+      "entitlement_for_smsoip": "false",
+      "ps_data_off": "true",
+      "ps_data_roaming": "true",
+      "notif_senderid": "1074633755707",
+      "notif_action": "2",
+      "server_vendor": "nokia"
+    }
+  ]
+}

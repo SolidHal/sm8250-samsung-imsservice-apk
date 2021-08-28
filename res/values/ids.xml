@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="btn_done" />
+    <item type="id" name="input" />
+    <item type="id" name="label" />
+    <item type="id" name="lbl_sms_code" />
+    <item type="id" name="message" />
+    <item type="id" name="messagebox" />
+    <item type="id" name="notification_dialog" />
+    <item type="id" name="pin_layout" />
+    <item type="id" name="show_pin" />
+    <item type="id" name="txt_sms" />
+</resources>

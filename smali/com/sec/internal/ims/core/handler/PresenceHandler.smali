@@ -1,0 +1,138 @@
+.class public abstract Lcom/sec/internal/ims/core/handler/PresenceHandler;
+.super Lcom/sec/internal/ims/core/handler/BaseHandler;
+.source "PresenceHandler.java"
+
+# interfaces
+.implements Lcom/sec/internal/ims/servicemodules/presence/IPresenceStackInterface;
+
+
+# direct methods
+.method protected constructor <init>(Landroid/os/Looper;)V
+    .locals 0
+    .param p1, "looper"    # Landroid/os/Looper;
+
+    .line 27
+    invoke-direct {p0, p1}, Lcom/sec/internal/ims/core/handler/BaseHandler;-><init>(Landroid/os/Looper;)V
+
+    .line 28
+    return-void
+.end method
+
+
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
+    .param p1, "msg"    # Landroid/os/Message;
+
+    .line 62
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    .line 64
+    iget-object v0, p0, Lcom/sec/internal/ims/core/handler/PresenceHandler;->LOG_TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unknown event "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p1, Landroid/os/Message;->what:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 66
+    return-void
+.end method
+
+.method public publish(Lcom/sec/ims/presence/PresenceInfo;Landroid/os/Message;I)V
+    .locals 0
+    .param p1, "presenceInfo"    # Lcom/sec/ims/presence/PresenceInfo;
+    .param p2, "onComplete"    # Landroid/os/Message;
+    .param p3, "phoneId"    # I
+
+    .line 54
+    return-void
+.end method
+
+.method public registerForPresenceInfo(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .line 36
+    return-void
+.end method
+
+.method public registerForPublishFailure(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .line 40
+    return-void
+.end method
+
+.method public registerForWatcherInfo(Landroid/os/Handler;ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "h"    # Landroid/os/Handler;
+    .param p2, "what"    # I
+    .param p3, "obj"    # Ljava/lang/Object;
+
+    .line 32
+    return-void
+.end method
+
+.method public subscribe(Lcom/sec/ims/util/ImsUri;ZLandroid/os/Message;Ljava/lang/String;I)V
+    .locals 0
+    .param p1, "uri"    # Lcom/sec/ims/util/ImsUri;
+    .param p2, "isAnonymousFetch"    # Z
+    .param p3, "onComplete"    # Landroid/os/Message;
+    .param p4, "subscriptionId"    # Ljava/lang/String;
+    .param p5, "phoneId"    # I
+
+    .line 50
+    return-void
+.end method
+
+.method public subscribeList(Ljava/util/List;ZLandroid/os/Message;Ljava/lang/String;ZII)V
+    .locals 0
+    .param p2, "isAnonymousFetch"    # Z
+    .param p3, "onComplete"    # Landroid/os/Message;
+    .param p4, "subscriptionId"    # Ljava/lang/String;
+    .param p5, "isGzipEnabled"    # Z
+    .param p6, "expiry"    # I
+    .param p7, "phoneId"    # I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/sec/ims/util/ImsUri;",
+            ">;Z",
+            "Landroid/os/Message;",
+            "Ljava/lang/String;",
+            "ZII)V"
+        }
+    .end annotation
+
+    .line 45
+    .local p1, "uris":Ljava/util/List;, "Ljava/util/List<Lcom/sec/ims/util/ImsUri;>;"
+    return-void
+.end method
+
+.method public unpublish(I)V
+    .locals 0
+    .param p1, "phoneId"    # I
+
+    .line 58
+    return-void
+.end method

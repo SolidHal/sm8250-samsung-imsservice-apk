@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configurations>
+    <configuration name="default">
+        <item key="41">0</item>
+        <item key="94">1</item>
+        <item key="93">1</item>
+        <item key="31">1</item>
+        <item key="10">1</item>
+        <item key="40">5</item>
+        <item key="39">6</item>
+        <item key="106">60</item>
+        <item key="44">1</item>
+        <item key="114">1</item>
+        <item key="35">30</item>
+        <item key="72">1</item>
+    </configuration>
+    <configuration name="GCF">
+        <item key="133">1</item>
+    </configuration>
+    <configuration name="SPR,TFS,XAS">
+        <item key="133" type="NV">1</item>
+        <item key="73">sip:ipsmgw@ipsmgw.ims.spcsdns.net</item>
+    </configuration>
+    <configuration name="TLS,TLA">
+        <item key="94">0</item>
+    </configuration>
+    <configuration name="USC">
+        <item key="81" type="NV">1</item>
+        <item key="43">8152439109</item>
+        <item key="9">3GPP2</item>
+    </configuration>
+</configurations>

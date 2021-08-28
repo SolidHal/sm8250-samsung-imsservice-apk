@@ -1,0 +1,269 @@
+{
+  "note": "Overwriting Service list to disable RCS presence for ATT",
+  "imsprofile_update": {
+    "profile": [
+      {
+        "name": "TMobile LTE/WiFi",
+        "mnoname": "TMobile_US",
+        "enable_rcs": true,
+        "network": [
+          {
+            "type": "lte,wifi",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip",
+              "presence"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "T-Mobile LTE/WiFi Lab",
+        "mnoname": "TMobile_US:LAB",
+        "enable_rcs": true,
+        "network": [
+          {
+            "type": "lte,wifi",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip",
+              "presence"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "ATT VoLTE",
+        "mnoname": "ATT_US",
+        "network": [
+          {
+            "type": "lte,hspa,umts",
+            "services": [
+              "mmtel",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "ATT E911",
+        "mnoname": "ATT_US",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "AIO VoLTE",
+        "mnoname": "ATT_US:AIO",
+        "network": [
+          {
+            "type": "lte,hspa,umts",
+            "services": [
+              "mmtel",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "AIO E911",
+        "mnoname": "ATT_US:AIO",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "FirstNet VoLTE",
+        "mnoname": "ATT_US:FN",
+        "network": [
+          {
+            "type": "lte,hspa,umts",
+            "services": [
+              "mmtel",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "FirstNet E911",
+        "mnoname": "ATT_US:FN",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "ATT MVNO VoLTE",
+        "mnoname": "ATT_US:MVNO",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "ATT MVNO E911",
+        "mnoname": "ATT_US:MVNO",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "VZW VoLTE",
+        "mnoname": "VZW_US",
+        "enable_rcs": true,
+        "rcs_profile": "",
+        "network": [
+          {
+            "type": "lte,wifi",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip",
+              "presence"
+            ],
+            "enabled": true
+          },
+          {
+            "type": "ehrpd",
+            "services": [
+              "smsip",
+              "presence"
+            ],
+            "enabled": true,
+            "dereg_timeout": 4000
+          }
+        ]
+      },
+      {
+        "name": "BMC VoLTE/RCS",
+        "mnoname": "Bell_CA",
+        "enable_rcs": true,
+        "network": [
+          {
+            "type": "lte,wifi",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip",
+              "presence"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "VIVA Kuwait VoLTE",
+        "mnoname": "Viva_KW",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel",
+              "mmtel-video",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "VIVA Bahrain VoLTE",
+        "mnoname": "Viva_BH",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel",
+              "smsip"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "Telefonica Slovakia VoLTE",
+        "mnoname": "Telefonica_SK",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "Telefonica Slovakia Emergency",
+        "mnoname": "Telefonica_SK",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel"
+            ],
+            "enabled": true
+          }
+        ]
+      },
+      {
+        "name": "VIETTEL VOLTE",
+        "mnoname": "Viettel_VN",
+        "network": [
+          {
+            "type": "lte",
+            "services": [
+              "mmtel"
+            ],
+            "enabled": true
+          }
+        ]
+      }
+    ]
+  },
+  "globalsettings_update": {
+    "globalsetting": [
+      {
+        "mnoname": "VZW_US",
+        "rcs_local_config_server": 2
+      }
+    ]
+  }
+}
