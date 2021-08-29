@@ -629,13 +629,13 @@
     .line 208
     new-instance v0, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
 
-    const-string v1, "com.sec.knox.provider2"
+    sget-object v1, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings;->GLOBAL:Ljava/lang/String;
 
-    const-string v3, "PhoneRestrictionPolicy"
+    const-string v2, "com.sec.ims.settings"
 
-    const-string v5, "isRCSEnabled"
+    const-string v5, ""
 
-    invoke-direct {v0, v1, v3, v5}, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v1, v5}, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings;->RCS_ALLOWED_URI:Lcom/sec/internal/constants/ims/ImsConstants$SystemSettings$SettingsItem;
 
