@@ -117,40 +117,7 @@
     .locals 2
 
     .line 32
-    invoke-static {}, Landroid/os/Debug;->semIsProductDev()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 33
-    const-string/jumbo v0, "ro.product_ship"
-
-    const-string/jumbo v1, "true"
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    .line 32
-    :goto_1
+    const v0, true
     return v0
 .end method
 
