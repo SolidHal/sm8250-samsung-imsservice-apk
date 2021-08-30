@@ -851,104 +851,25 @@
 .end method
 
 .method static sendRCSPPubInfoToHQM(Landroid/content/Context;ILjava/lang/String;I)Z
-    .locals 3
+    .locals 1
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "publishErrorCode"    # I
     .param p2, "publishErrorReason"    # Ljava/lang/String;
     .param p3, "phoneId"    # I
 
-    .line 206
-    if-gez p3, :cond_0
-
-    .line 207
-    const/4 p3, 0x0
-
-    .line 210
-    :cond_0
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    .line 211
-    .local v0, "rcsmKeys":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "ERRC"
-
-    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 212
-    const-string v1, "ERES"
-
-    invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 214
-    const-string v1, "RCSP"
-
-    invoke-static {p0, v1, p3, v0}, Lcom/sec/internal/ims/diagnosis/RcsHqmAgent;->sendRCSInfoToHQM(Landroid/content/Context;Ljava/lang/String;ILjava/util/Map;)Z
-
-    move-result v1
-
-    return v1
+    const v0, true
+    return v0
 .end method
 
 .method static sendRCSPSubInfoToHQM(Landroid/content/Context;II)Z
-    .locals 3
+    .locals 1
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "subscribeErrorCode"    # I
     .param p2, "phoneId"    # I
 
     .line 223
-    const/16 v0, 0x193
 
-    if-eq p1, v0, :cond_2
-
-    const/16 v0, 0x194
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    .line 227
-    :cond_0
-    if-gez p2, :cond_1
-
-    .line 228
-    const/4 p2, 0x0
-
-    .line 231
-    :cond_1
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    .line 232
-    .local v0, "rcsmKeys":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "SERR"
-
-    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 234
-    const-string v1, "RCSP"
-
-    invoke-static {p0, v1, p2, v0}, Lcom/sec/internal/ims/diagnosis/RcsHqmAgent;->sendRCSInfoToHQM(Landroid/content/Context;Ljava/lang/String;ILjava/util/Map;)Z
-
-    move-result v1
-
-    return v1
-
-    .line 224
-    .end local v0    # "rcsmKeys":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    :cond_2
-    :goto_0
-    const/4 v0, 0x0
-
+    const v0, true
     return v0
 .end method
 

@@ -3747,43 +3747,8 @@
 .end method
 
 .method sendRCSCInfoToHQM(I)V
-    .locals 2
+    .locals 1
     .param p1, "phoneId"    # I
-
-    .line 585
-    if-gez p1, :cond_0
-
-    .line 586
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v1, "sendRCSCInfoToHQM : phoneId is invaild "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CapabilityUtil"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 587
-    const/4 p1, 0x0
-
-    .line 589
-    :cond_0
-    iget-object v0, p0, Lcom/sec/internal/ims/servicemodules/options/CapabilityUtil;->mCapabilityDiscovery:Lcom/sec/internal/ims/servicemodules/options/CapabilityDiscoveryModule;
-
-    invoke-virtual {v0, p1}, Lcom/sec/internal/ims/servicemodules/options/CapabilityDiscoveryModule;->getCapabilitiesCache(I)Lcom/sec/internal/ims/servicemodules/options/CapabilitiesCache;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/sec/internal/ims/servicemodules/options/CapabilitiesCache;->sendRCSCInfoToHQM()V
 
     .line 590
     return-void
@@ -3795,57 +3760,8 @@
     .param p2, "isLatching"    # Z
     .param p3, "phoneId"    # I
 
-    .line 567
-    if-gez p3, :cond_0
-
-    .line 568
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v1, "sendRCSLInfoToHQM : phoneId is invaild "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CapabilityUtil"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 569
-    const/4 p3, 0x0
-
-    .line 572
-    :cond_0
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    .line 573
-    .local v0, "rcsmKeys":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    xor-int/lit8 v1, p2, 0x1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "LTCH"
-
-    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 575
-    const-string v1, "RCSL"
-
-    invoke-static {p1, v1, p3, v0}, Lcom/sec/internal/ims/diagnosis/RcsHqmAgent;->sendRCSInfoToHQM(Landroid/content/Context;Ljava/lang/String;ILjava/util/Map;)Z
-
-    move-result v1
-
-    return v1
+    const v0, true
+    return v0
 .end method
 
 .method updateExpCapInfoExpiry(Lcom/sec/ims/options/Capabilities;JI)I

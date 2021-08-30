@@ -2940,57 +2940,13 @@
 .end method
 
 .method protected sendLogToHqmManager(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 11
+    .locals 1
     .param p1, "feature"    # Ljava/lang/String;
     .param p2, "custom_dataset"    # Ljava/lang/String;
 
     .line 333
-    iget-object v0, p0, Lcom/sec/internal/ims/diagnosis/ImsLogAgent;->mContext:Landroid/content/Context;
-
-    const-string v1, "HqmManagerService"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/SemHqmManager;
-
-    .line 334
-    .local v0, "hqm":Landroid/os/SemHqmManager;
-    if-nez v0, :cond_0
-
-    .line 335
-    const/4 v1, 0x0
-
-    return v1
-
-    .line 337
-    :cond_0
-    const/4 v2, 0x0
-
-    const-string v3, "Telephony"
-
-    const-string/jumbo v5, "sm"
-
-    const-string v6, "0.0"
-
-    const-string/jumbo v7, "sec"
-
-    const-string v8, ""
-
-    const-string v10, ""
-
-    move-object v1, v0
-
-    move-object v4, p1
-
-    move-object v9, p2
-
-    invoke-virtual/range {v1 .. v10}, Landroid/os/SemHqmManager;->sendHWParamToHQM(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v1
-
-    return v1
+    const v0, true
+    return v0
 .end method
 
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I

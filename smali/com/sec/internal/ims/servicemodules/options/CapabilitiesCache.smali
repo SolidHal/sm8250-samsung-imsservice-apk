@@ -1012,16 +1012,7 @@
 .end method
 
 .method public sendRCSCInfoToHQM()V
-    .locals 2
-
-    .line 172
-    iget-object v0, p0, Lcom/sec/internal/ims/servicemodules/options/CapabilitiesCache;->mCapabilityStorageHandler:Landroid/os/Handler;
-
-    new-instance v1, Lcom/sec/internal/ims/servicemodules/options/CapabilitiesCache$6;
-
-    invoke-direct {v1, p0}, Lcom/sec/internal/ims/servicemodules/options/CapabilitiesCache$6;-><init>(Lcom/sec/internal/ims/servicemodules/options/CapabilitiesCache;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    .locals 1
 
     .line 181
     return-void
