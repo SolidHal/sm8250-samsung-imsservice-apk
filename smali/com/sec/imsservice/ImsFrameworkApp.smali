@@ -22,15 +22,25 @@
 .method public onCreate()V
     .locals 8
 
+    const-string v1, "ImsFrameworkApp"
+
+    const-string/jumbo v5, "SOLIDHAL in onCreate"
+
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 37
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
+
+
+    const-string/jumbo v5, "SOLIDHAL in back from super call"
+
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 39
     invoke-static {}, Lcom/sec/ims/extensions/Extensions$UserHandle;->myUserId()I
 
     move-result v0
 
-    const-string v1, "ImsFrameworkApp"
 
     if-eqz v0, :cond_0
 
@@ -141,7 +151,7 @@
 
     move-result-object v5
 
-    invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 65
     const-string v5, ":ConfigService"
@@ -155,7 +165,7 @@
     .line 66
     const-string/jumbo v5, "this is rcs config process. stop init"
 
-    invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 67
     return-void
@@ -173,7 +183,7 @@
     .line 69
     const-string/jumbo v5, "this is CloudMessage process."
 
-    invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 70
     const/4 v1, 0x0
@@ -228,19 +238,23 @@
     .line 80
     const-string/jumbo v5, "this is CABService process. stop init"
 
-    invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 81
     return-void
 
     .line 83
     :cond_6
-    const-string v5, "onCreate()"
+    const-string v5, "SOLIDHAL onCreate() 2"
 
-    invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 87
     :try_start_1
+    const-string/jumbo v5, "SOLIDHAL trying makeImsService"
+
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-static {p0}, Lcom/sec/internal/ims/imsservice/ImsServiceStub;->makeImsService(Landroid/content/Context;)Lcom/sec/internal/ims/imsservice/ImsServiceStub;
 
     .line 88
