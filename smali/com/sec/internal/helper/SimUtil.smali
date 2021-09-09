@@ -777,10 +777,16 @@
 .end method
 
 .method public static setPhoneCount(I)V
-    .locals 0
+    .locals 3
     .param p0, "phoneCount"    # I
 
     .line 76
+    sget-object v1, Lcom/sec/internal/helper/SimUtil;->LOG_TAG:Ljava/lang/String;
+
+    const-string/jumbo v2, "SOLIDHAL setPhoneCount"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     sput p0, Lcom/sec/internal/helper/SimUtil;->sPhoneCount:I
 
     .line 77
