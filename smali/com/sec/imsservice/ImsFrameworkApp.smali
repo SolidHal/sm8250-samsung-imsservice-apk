@@ -20,10 +20,16 @@
 
 # virtual methods
 .method public onCreate()V
-    .locals 8
+    .locals 10
 
     .line 37
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
+
+    const-string/jumbo v8, "ImsFrameworkApp"
+
+    const-string/jumbo v9, "SOLIDHAL in ImsFrameworkApp"
+
+    invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 39
     invoke-static {}, Lcom/sec/ims/extensions/Extensions$UserHandle;->myUserId()I
@@ -31,6 +37,8 @@
     move-result v0
 
     const-string v1, "ImsFrameworkApp"
+
+
 
     if-eqz v0, :cond_0
 
@@ -235,9 +243,9 @@
 
     .line 83
     :cond_6
-    const-string v5, "onCreate()"
+    const-string v5, "SOLIDHAL onCreate()"
 
-    invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 87
     :try_start_1
