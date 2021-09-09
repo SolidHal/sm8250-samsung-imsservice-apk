@@ -2136,19 +2136,41 @@
 
     .line 569
     :cond_1
+    :try_start_0
+    sget v0, Landroid/os/Build$VERSION;->SEM_INT:I
 
+    const/16 v1, 0xa9c
 
-
-    sget-object v2, Lcom/sec/internal/ims/imsservice/ImsServiceStub;->LOG_TAG:Ljava/lang/String;
-    const-string v1, "calling makeImsService"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    if-lt v0, v1, :cond_2
 
     .line 570
     iget-object v0, p0, Lcom/sec/internal/ims/imsservice/ImsServiceStub;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/sec/internal/ims/imsservice/SemImsServiceStub;->makeSemImsService(Landroid/content/Context;)Lcom/sec/internal/ims/imsservice/SemImsServiceStub;
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 574
+    :cond_2
+    goto :goto_0
+
+    .line 572
+    :catch_0
+    move-exception v0
+
+    .line 573
+    .local v0, "e":Ljava/lang/NoSuchFieldError;
+    sget-object v1, Lcom/sec/internal/ims/imsservice/ImsServiceStub;->LOG_TAG:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/NoSuchFieldError;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 576
+    .end local v0    # "e":Ljava/lang/NoSuchFieldError;
+    :goto_0
     invoke-virtual {p0}, Lcom/sec/internal/ims/imsservice/ImsServiceStub;->registerDefaultSmsPackageChangeReceiver()V
 
     .line 577
