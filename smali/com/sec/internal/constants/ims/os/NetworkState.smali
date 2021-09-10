@@ -79,7 +79,7 @@
     iput v1, p0, Lcom/sec/internal/constants/ims/os/NetworkState;->mMobileDataRegState:I
 
     .line 46
-    sget v1, Lcom/sec/ims/extensions/ServiceStateExt;->SNAPSHOT_STATUS_DEACTIVATED:I
+    const/4 v1, 0x0
 
     iput v1, p0, Lcom/sec/internal/constants/ims/os/NetworkState;->mSnapshotState:I
 

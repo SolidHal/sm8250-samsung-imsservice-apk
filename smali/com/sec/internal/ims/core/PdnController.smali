@@ -1653,7 +1653,7 @@
 
     move-result v0
 
-    sget v1, Lcom/sec/ims/extensions/ServiceStateExt;->SNAPSHOT_STATUS_ACTIVATED:I
+    const/4 v1, 0x1
 
     const/4 v2, 0x1
 
@@ -6809,7 +6809,7 @@
     invoke-virtual {v0, v2}, Lcom/sec/internal/constants/ims/os/NetworkState;->setMobileDataRegState(I)V
 
     .line 341
-    sget v2, Lcom/sec/ims/extensions/ServiceStateExt;->SNAPSHOT_STATUS_DEACTIVATED:I
+    const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/sec/internal/constants/ims/os/NetworkState;->setSnapshotState(I)V
 
